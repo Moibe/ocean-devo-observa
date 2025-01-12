@@ -1,6 +1,6 @@
-result_ok = "Image recognition ready" #Future que el texto de result ok, sea globales para q se relacione con la app en cuestión.
+result_ok = "Reconocimiento de imagen terminado." #Future que el texto de result ok, sea globales para q se relacione con la app en cuestión.
 
-out_of_credits = "Out of credits..."
+out_of_credits = "Sin créditos..."
 
 PAUSED = "AI Engine Paused, ready soon."
 RUNTIME_ERROR= "Error building AI environment, please contact me."

@@ -5,8 +5,10 @@ import funciones
 import sulkuFront
 import autorizador
 import gradio as gr
+import observa.herramientas as observa_herramientas
 
-def iniciar():    
+def iniciar():
+    #En iniciar puede hacer ptras actividades además de arrancar la interfaz de gradio!
     app_path = globales.app_path
     main.queue(max_size=globales.max_size)
     main.launch(auth=autorizador.authenticate, root_path=app_path, server_port=globales.server_port)
