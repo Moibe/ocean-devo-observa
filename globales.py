@@ -1,7 +1,7 @@
 import gradio as gr
 
 #MAIN
-version = "2.0.1"
+version = "2.0.2"
 env = "dev"
 aplicacion = "observa-dev"
 
@@ -9,8 +9,8 @@ seleccion_api = "eligeQuotaOCosto" #eligeQuotaOCosto , eligeAOB o eligeGratisOCo
 max_size = 20 #queue size
 
 #Quota o Costo
-api_zero = ("Moibe/comprension-imagenes", "quota")
-api_cost = ("vikhyatk/moondream2", "gratis") #Éste es un caso raro pq después de acabarte la quota viene el gratis.
+api_cost = ("Moibe/comprension-imagenes", "quota")
+api_zero = ("vikhyatk/moondream2", "gratis") #Éste es un caso raro pq después de acabarte la quota viene el gratis.
 #A o B
 api_a = ("Moibe/image-blend", "gratis")
 api_b = ("Moibe/image-blend", "gratis")
@@ -27,6 +27,6 @@ app_path = "/observa-dev"
 server_port=7830
 #tema = tools.theme_selector()
 tema = gr.themes.Default()
-flag = "never" #never, auto o manual.
+flag = "auto" #never, auto o manual.
 
 #Future: Put age to cookies.

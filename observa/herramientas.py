@@ -41,7 +41,6 @@ def infiere(modelo, texto):
         "inputs": texto
     })
 
-    print(output)
     return output
 
 def traduccion_final(texto): 
