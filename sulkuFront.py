@@ -3,13 +3,12 @@ import globales
 import sulkuPypi
 import gradio as gr
 import threading
-#import sulkuMessages
 import observa.herramientas as observa_herramientas
+import tools
 
-if globales.mensajes == "en":
-    import sulkuMessages
-else:
-    import sulkuMessages_es as sulkuMessages
+# import modulo_correspondiente
+mensajes, sulkuMessages = tools.get_mensajes(globales.mensajes_lang)
+print(mensajes.saludo)
 
 result_from_displayTokens = None
 result_from_initAPI = None    

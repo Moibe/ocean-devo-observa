@@ -1,7 +1,7 @@
 import gradio as gr
 
 #MAIN
-version = "2.0.2"
+version = "4.0.2"
 env = "dev"
 aplicacion = "observa-dev"
 
@@ -31,5 +31,5 @@ flag = "auto" #never, auto o manual.
 
 #Future: Put age to cookies.
 
-neural_wait = 6
-mensajes = "en"
+neural_wait = 3
+mensajes_lang = "es"

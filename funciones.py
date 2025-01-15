@@ -4,15 +4,12 @@ import sulkuPypi
 import sulkuFront
 import gradio as gr
 import gradio_client
-import time
 import tools
 import observa.herramientas as observa_herramientas
 import observa.biblioteca_modelos as biblioteca_modelos
 
-if globales.mensajes == "en":
-    import sulkuMessages
-else:
-    import sulkuMessages_es as sulkuMessages
+mensajes, sulkuMessages = tools.get_mensajes(globales.mensajes_lang)
+print(mensajes.saludo)
 
 btn_buy = gr.Button("Get Credits", visible=False, size='lg')
 
@@ -54,7 +51,7 @@ def mass(input1, input2): #input1 es la imagen e input2 es el texto.
     observacion = ""
     if texto == "Lang Unknown": 
         texto = "Describe the image" #Como desconoció el idioma harémos una pregunta estándar.
-        observacion = sulkuMessages.lang_unk
+        observacion = mensajes.lang_unk
 
     imagenDestiny = gradio_client.handle_file(input1)  
 

@@ -11,12 +11,3 @@ NO_FACE = "Unable to detect a face in the image. Please upload a different photo
 GENERAL = "Network error, no credits were debited."
 ELSE = "Error. No credits were debited."
 
-#Future: Ésto pónlo en otra hoja de mensajes.
-
-#Observa Related
-lang_unk = "No entiendo del todo lo que haz escrito, pero interpretaré la imagen."
-
-#labels: En cada app solo pon los de esa app.
-label_input1 = "Upload an Image"
-label_input2 = "Ask a Question"
-label_resultado = "Result"
