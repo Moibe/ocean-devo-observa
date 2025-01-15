@@ -30,3 +30,6 @@ tema = gr.themes.Default()
 flag = "auto" #never, auto o manual.
 
 #Future: Put age to cookies.
+
+neural_wait = 6
+mensajes = "en"

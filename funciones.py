@@ -9,6 +9,11 @@ import tools
 import observa.herramientas as observa_herramientas
 import observa.biblioteca_modelos as biblioteca_modelos
 
+if globales.mensajes == "en":
+    import sulkuMessages
+else:
+    import sulkuMessages_es as sulkuMessages
+
 btn_buy = gr.Button("Get Credits", visible=False, size='lg')
 
 #PERFORM es la app INTERNA que llamará a la app externa.
@@ -49,7 +54,7 @@ def mass(input1, input2): #input1 es la imagen e input2 es el texto.
     observacion = ""
     if texto == "Lang Unknown": 
         texto = "Describe the image" #Como desconoció el idioma harémos una pregunta estándar.
-        observacion = "No entiendo tu idioma, pero interpretaré la imagen."
+        observacion = sulkuMessages.lang_unk
 
     imagenDestiny = gradio_client.handle_file(input1)  
 
