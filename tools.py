@@ -56,11 +56,16 @@ def eligeAOB():
     return api, tipo_api
 
 def eligeQuotaOCosto():
-#Se eligirá en los casos en los que se use Zero, para extender las posibilidades de Quota y después usar Costo.
+
+    #Future: Aquí lo único que se agregaría en dado caso en el futuro es un preselector entre dos de quota,
+    #por la question de los queues solamente, finalmente comparte su gauge de quota. 
+    
+    #Primero revisa si aún hay quota disponible para ejecutar ÉSTE proceso.
     diferencia = sulkuPypi.getQuota() - globales.process_cost
 
+    #Si la diferencia es mayor de cero.
     if diferencia >= 0:
-        #Entonces puedes usar Zero.
+        #Entonces puedes usar ZeroGPU.
         api, tipo_api = globales.api_zero
         #Además Si el resultado puede usar la Zero "por última vez", debe de ir prendiendo la otra.
         #if diferencia es menor que el costo de un sig.  del proceso, ve iniciando ya la otra API.

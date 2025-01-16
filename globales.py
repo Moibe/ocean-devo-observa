@@ -1,12 +1,15 @@
 import gradio as gr
 
 #MAIN
-version = "4.0.2"
+version = "4.0.3"
 env = "dev"
 aplicacion = "observa-dev"
 
 seleccion_api = "eligeQuotaOCosto" #eligeQuotaOCosto , eligeAOB o eligeGratisOCosto
 max_size = 20 #queue size
+
+api_a = ("vikhyatk/moondream2", "gratis") 
+api_b = ("Moibe/comprension-imagenes", "quota") #Se ponen dos para distribuir los queues.
 
 #Quota o Costo
 api_cost = ("Moibe/comprension-imagenes", "quota")
