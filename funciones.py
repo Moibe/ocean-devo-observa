@@ -69,7 +69,7 @@ def mass(input1, input2): #input1 es la imagen e input2 es el texto.
         #(Si llega aquí, debes debitar de la quota, incluso si detecto no-face o algo.)
         #Future: Debe de aglutinarse ésto en una función con entrada y salida para no tener tanto texto.
         if tipo_api == "quota":
-            print("Como el tipo api fue gratis, si debitaremos la quota.")
+            print("Como el tipo api fue quota, si debitaremos la quota.")
             sulkuPypi.updateQuota(globales.process_cost)
         #No debitas la cuota si no era gratis, solo aplica para Zero.         
                 
