@@ -8,7 +8,6 @@ import tools
 
 # import modulo_correspondiente
 mensajes, sulkuMessages = tools.get_mensajes(globales.mensajes_lang)
-print(mensajes.saludo)
 
 result_from_displayTokens = None
 result_from_initAPI = None    

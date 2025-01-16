@@ -2,9 +2,7 @@ import gradio as gr
 import globales
 import tools
 
-
 mensajes, sulkuMessages = tools.get_mensajes(globales.mensajes_lang)
-print(mensajes.saludo)
 
 # Diccionario para mapear los sets a sus respectivas configuraciones
 configuraciones = {

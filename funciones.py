@@ -9,7 +9,6 @@ import observa.herramientas as observa_herramientas
 import observa.biblioteca_modelos as biblioteca_modelos
 
 mensajes, sulkuMessages = tools.get_mensajes(globales.mensajes_lang)
-print(mensajes.saludo)
 
 btn_buy = gr.Button("Get Credits", visible=False, size='lg')
 
@@ -45,6 +44,8 @@ def perform(input1, input2, request: gr.Request):
 #MASS es la que ejecuta la aplicación EXTERNA
 def mass(input1, input2): #input1 es la imagen e input2 es el texto.
 
+    print("La pregunta recibida es: ")
+    print(input2)
     api, tipo_api = tools.eligeAPI(globales.seleccion_api)
 
     texto = observa_herramientas.traduccion_final(input2)
@@ -59,6 +60,7 @@ def mass(input1, input2): #input1 es la imagen e input2 es el texto.
     
     try:         
         result = client.predict(imagenDestiny, texto, api_name=globales.interface_api_name)
+        print("La pregunta final quedó: ", texto)
         print("Ésto es result: ", result)
         #Siempre traduciremos del inglés al español.
         traduccion = observa_herramientas.infiere(biblioteca_modelos.ingles_español, result)
