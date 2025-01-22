@@ -1,11 +1,9 @@
-import time
 import inputs
 import globales
 import funciones
 import sulkuFront
 import autorizador
 import gradio as gr
-import observa.herramientas as observa_herramientas
 
 def iniciar():
     #En iniciar puede hacer ptras actividades además de arrancar la interfaz de gradio!
@@ -37,7 +35,5 @@ with gr.Blocks(theme=globales.tema, css="footer {visibility: hidden}") as main:
                 )
         except Exception as e:
             print("Interface error...") #Checar si alguna vez entra.
-
-    #result.change(welcome, result, lbl_console)    
         
 iniciar()
