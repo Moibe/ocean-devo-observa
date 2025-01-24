@@ -3,7 +3,6 @@ import globales
 import sulkuPypi
 import gradio as gr
 import threading
-import observa.herramientas as observa_herramientas
 import tools
 
 # import modulo_correspondiente

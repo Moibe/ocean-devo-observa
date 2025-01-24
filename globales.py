@@ -1,7 +1,7 @@
 import gradio as gr
 
 #MAIN
-version = "4.1.6"
+version = "4.1.7"
 env = "dev"
 aplicacion = "observa-dev"
 
